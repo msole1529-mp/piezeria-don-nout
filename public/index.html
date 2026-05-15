@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don none</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h1> Pizzería Don Node</h1>
+        <h2>Nuevo Pedido</h2>
+
+        <form action="/pedidos/" method="POST">
+
+            <div class="mb-3">
+                <label>Nombre del cliente</label>
+                <input type="text" class="form-control" name="nombre" required>
+            </div>
+
+            <div class="mb-3">
+                <label>Tamaño de la pizza</label><br>
+                <input type="radio" name="tamano" value="chica" required> Chica - $3.990<br>
+                <input type="radio" name="tamano" value="mediana"> Mediana - $5.990<br>
+                <input type="radio" name="tamano" value="grande"> Grande - $8.490<br>
+            </div>
+
+            <div class="mb-3">
+                <label>Ingredientes (mínimo 1)</label><br>
+                <input type="checkbox" name="ingredientes" value="Jamón"> Jamón<br>
+                <input type="checkbox" name="ingredientes" value="Queso extra"> Queso extra<br>
+                <input type="checkbox" name="ingredientes" value="Champiñones"> Champiñones<br>
+                <input type="checkbox" name="ingredientes" value="Aceitunas"> Aceitunas<br>
+                <input type="checkbox" name="ingredientes" value="Cebolla"> Cebolla<br>
+                <input type="checkbox" name="ingredientes" value="Pimentón"> Pimentón<br>
+                <input type="checkbox" name="ingredientes" value="Tocino"> Tocino<br>
+            </div>
+
+            <div class="mb-3">
+                <label>Cantidad de pizzas</label>
+                <input type="number" class="form-control" name="cantidad" value="1" min="1" required>
+            </div>
+
+            <button type="submit" class="btn btn-danger">Registrar pedido</button>
+            <a href="/pedidos/lista" class="btn btn-secondary">Ver lista de pedidos</a>
+
+        </form>
+    </div>
+
+</body>
+</html>
