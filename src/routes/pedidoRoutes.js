@@ -4,5 +4,6 @@ const controller = require('../controllers/pedidoController')
 
 router.post('/', controller.registrarPedido)
 router.get('/lista', controller.listarPedidos)
+router.get('/boleta/:index', controller.descargarBoleta)
 
 module.exports = router
